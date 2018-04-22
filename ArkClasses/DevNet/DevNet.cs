@@ -5,28 +5,17 @@ using System.Text;
 using NBitcoin;
 using NBitcoin.Crypto;
 using NBitcoin.DataEncoders;
+using Language = ArkAPI.Helpers.Language;
 
-namespace ArkAPI
+namespace ArkAPI.DevNet
 {
-    public static class DevNetworkApi
+    public static class DevNet
     {
-        private static Mnemonic _mnemo;
         private static PubKey _pubkey;
 
-        public static string GeneratePassphrase(Language lng)
+        public static PubKey GenerateDevNetPubKey(string passphrase)
         {
-            _mnemo = new Mnemonic(lng.FetchLanguage(), WordCount.Twelve);
-            return _mnemo.ToString();
-        }
-
-
-        public static PubKey GeneratePubKey(string passphrase)
-        {
-            string mypass;
-
-            if (passphrase != null) mypass = passphrase;
-            else if (_mnemo != null) mypass = _mnemo.ToString();
-            else mypass = GeneratePassphrase(Language.English);
+            var mypass = passphrase ?? ArkBases.GeneratePassphrase(Language.English);
 
             var passphraseBytes = Encoding.UTF8.GetBytes(mypass);
             var hash = Hashes.SHA256(passphraseBytes);
@@ -36,9 +25,7 @@ namespace ArkAPI
             return pubkey;
         }
 
-
-        //MainNet byte : 0x17
-        public static string Get_address(this PubKey publicKey)
+        public static string GetDevNetAddress(this PubKey publicKey)
         {
             if (publicKey == null && _pubkey == null)
                 throw new NotImplementedException("Generate a pubkey or pass one as parameter");

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ArkAPI
+namespace ArkAPI.Helpers
 {
     public enum Language
     {

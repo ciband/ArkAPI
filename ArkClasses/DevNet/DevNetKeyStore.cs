@@ -2,31 +2,30 @@
 using System.IO;
 using System.IO.IsolatedStorage;
 using System.Text;
+using ArkAPI.Helpers;
 
-namespace ArkAPI
+namespace ArkAPI.DevNet
 {
 
 
-    public static class KeyStore
+    public static class DevNetKeyStore
     {
-        private static readonly string KeyStorePath = string.Format($"DFTRIBE\\{nameof(KeyStore)}");
+        private static readonly string KeyStorePath = string.Format($"DFTRIBE\\{nameof(DevNetKeyStore)}");
         private static readonly string AccountFilesPath = KeyStorePath + "\\";
 
-        public static void SaveAccount(string passphrase, string password, string pincode)
+        public static void SaveDevNetAccount(string passphrase, string password, string pincode)
         {
 
             using (var isoStore = IsolatedStorageFile.GetUserStoreForDomain())
             {
-                var filepath = AccountFilesPath + DevNetworkApi.GeneratePubKey(passphrase).Get_address();
+                var filepath = AccountFilesPath + DevNet.GenerateDevNetPubKey(passphrase).GetDevNetAddress();
                 if (!isoStore.DirectoryExists(KeyStorePath)) isoStore.CreateDirectory(KeyStorePath);
+                
                 // Open or create a writable file.
                 var isoStream = isoStore.OpenFile(filepath, FileMode.OpenOrCreate, FileAccess.Write);
-                //var writer = new StreamWriter(isoStream);
-                //var tmp = EncryptBytes(passphrase.ToUtf8Bytes(), password, pincode);
-                //writer.WriteLine(tmp);               
-                //writer.Flush();
-
                 var writer = new BinaryWriter(isoStream,Encoding.UTF8,false);
+
+                //Encrypt the passphrase & write it
                 var tmp = RijndaelHelper.EncryptBytes(passphrase.ToUtf8Bytes(), password, pincode);
                 writer.Write(tmp);
                 writer.Flush();
@@ -36,7 +35,7 @@ namespace ArkAPI
             }
         }
 
-        public static IEnumerable<string> GetAcccounts
+        public static IEnumerable<string> GetDevNetAcccounts
         {
             get
             {
@@ -50,7 +49,7 @@ namespace ArkAPI
             }
         }
 
-        public static string GetAccountPassphrase(string accountAddress, string password, string pin)
+        public static string GetDevNetAccountPassphrase(string accountAddress, string password, string pin)
         {
             using (var isoStore = IsolatedStorageFile.GetUserStoreForDomain())
             {
