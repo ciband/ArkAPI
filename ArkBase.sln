@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkTestApp", "ArkBase\ArkTestApp.csproj", "{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkAPI", "ArkClasses\ArkAPI.csproj", "{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FDD24E0-1DDE-4BED-A76D-9A30D9D715FA}
+	EndGlobalSection
+EndGlobal
