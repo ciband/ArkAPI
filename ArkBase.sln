@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkTestApp", "ArkBase\ArkTestApp.csproj", "{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkTestApp", "ArkTestApp\ArkTestApp.csproj", "{AF8F0D3D-A87C-4285-A5D7-054B6D2F76BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkAPI", "ArkClasses\ArkAPI.csproj", "{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}"
 EndProject
