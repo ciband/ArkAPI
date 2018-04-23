@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkTestApp", "ArkTestApp\Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkAPI", "ArkClasses\ArkAPI.csproj", "{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkTribe", "ArkTribe\ArkTribe.csproj", "{5A3651E0-3554-40CC-9B14-09F5E1F8B7C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48572AA4-45BE-4AC4-8E8D-9030D7819B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3651E0-3554-40CC-9B14-09F5E1F8B7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3651E0-3554-40CC-9B14-09F5E1F8B7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3651E0-3554-40CC-9B14-09F5E1F8B7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3651E0-3554-40CC-9B14-09F5E1F8B7C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
