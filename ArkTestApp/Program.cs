@@ -44,7 +44,7 @@ namespace ArkTestApp
             }
             Console.WriteLine();
 
-            var tmp2 = GetDevNetAccountPassphrase(Account, Password, Pin);
+            var tmp2 = GetDevNetAccountPassphrase(address, Password, Pin);
             Console.WriteLine(tmp2);
             Console.WriteLine();
 
